@@ -5,12 +5,13 @@ module.exports = function (config) {
   config.devtool = "source-map";
   config.plugins.push(
     new SentryWebpackPlugin({
-      authToken: "MY_AUTH_TOKEN",
-      org: "MY_ORG",
+      authToken: "AUTH_TOKEN",
+      org: "ORGANIZATION",
       project: "electron-source-maps",
-      release: "0.0.5",
+      release: "electron-source-maps@0.0.7",
       // webpack-specific configuration
       include: ".",
+      ignore: ["custom.webpack.additions.js", "node_modules"],
       debug: true,
       validate: true,
     })

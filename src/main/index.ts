@@ -7,7 +7,7 @@ import * as Sentry from "@sentry/electron";
 
 Sentry.init({
   dsn: "MY_DSN",
-  release: "0.0.5",
+  release: "electron-source-maps@0.0.7",
 });
 
 const isDevelopment = process.env.NODE_ENV !== "production";
